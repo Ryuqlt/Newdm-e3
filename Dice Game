@@ -2,6 +2,17 @@
 #include<stdlib.h>
 #include<time.h>
 
+void greet(){
+ char name[50];
+
+  printf("What is your name?\n");
+  scanf("%s",name);
+
+  printf("> %s\n",name);
+  printf("Hello, %s!\n",name);
+}
+
+
 int main(){
   int x,y;
   int Total;
@@ -11,6 +22,7 @@ int main(){
   y=(rand() %6 +1);
 
   Total  = x+y;
+  greet();
 
   printf("Rolling dice...\n");
   printf("Die1: %d\n",x);
