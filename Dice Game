@@ -2,8 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 
-void greet(){
- char name[50];
+void greet(char name[]){
 
   printf("What is your name?\n");
   scanf("%s",name);
@@ -16,24 +15,25 @@ void greet(){
 int main(){
   int x,y;
   int Total;
+  char name[50];
 
   srand(time(NULL));
   x=(rand() %6 +1);
   y=(rand() %6 +1);
 
   Total  = x+y;
-  greet();
+  greet(name);
 
-  printf("Rolling dice...\n");
+  printf("Rolling the dice...\n");
   printf("Die1: %d\n",x);
   printf("Die2: %d\n",y);
 
   printf("Total value: %d\n",Total);
  if(Total>=8){
-    printf("You won\n");
+    printf("%s won\n",name);
   }
   else{
-    printf("You lost\n");
+    printf("%s lost\n",name);
   }
 
 return 0;
